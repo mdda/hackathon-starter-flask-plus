@@ -2,6 +2,8 @@
 
 *.pyc
 
+env/
+
 backend/jquery*
 backend/bootstrap*
 
@@ -14,3 +16,7 @@ backend/flask/www/static/fonts/glyphicons-halflings-regular*
 backend/flask/www/static/images/ajax-loader.gif
 backend/flask/www/static/images/icons-png/
 backend/flask/www/static/images/icons-svg/
+
+backend/flask/www/static/jquery-mobile-demos/
+
+backend/flask/sqlite_*
