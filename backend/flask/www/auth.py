@@ -10,8 +10,8 @@ from os import urandom # for hashing of machine / session
 
 ##  Test at # Browser : http://0.0.0.0:7882/user/login :: This is the MAIN site
 
-##  Test at # Browser : http://mdda.redcatlabs.localhost:7882/user/login :: This is the mdda site
-##  Test at # Browser : http://mdda.redcatlabs.com:7882/user/login :: This is the mdda site
+##  Test at # Browser : http://subsite.localhost:7882/user/login :: This is the subsite site
+##  Test at # Browser : http://subsite.example.com:7882/user/login :: This is the subsite site
 
 @app.before_request
 def before_request():

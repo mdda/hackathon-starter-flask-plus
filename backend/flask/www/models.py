@@ -201,9 +201,9 @@ class Site(db.orm):
         'www.example.com':tag_main,
         
         # Special DNS entries
-        'mdda.example.com':'mdda',
-        # Test rig for single site 'mdda'
-        'localhost':'mdda',
+        'subsite.example.com':'subsite',
+        # Test rig for single site 'subsite'
+        'subsite.localhost':'subsite',
     }
 
     bundle = sa.Column(JSONstore)
@@ -232,9 +232,9 @@ class Site(db.orm):
                  'footer':"This site is a product of a Hackathon - Copyright 2013-2014",
                 })
                 Site.add(site)
-            if tag == 'mdda':
-                site = Site(tag, 'mdda playground')
-                site.bundle[''].update({ # This admin data is for all projects in site 'mdda'
+            if tag == 'subsite':
+                site = Site(tag, 'subsite playground')
+                site.bundle[''].update({ # This admin data is for all projects in site 'subsite'
                  'admin_name':'Admin Name : sub-site',
                  'admin_phone':'+dd-dddd-dddd',
                  'admin_email':'admin@example.com',
