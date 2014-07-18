@@ -92,47 +92,77 @@ Pull in Bootstrap
 
 ```
 # in ./backend
-
-wget https://github.com/twbs/bootstrap/releases/download/v3.2.0/bootstrap-3.2.0-dist.zip
-unzip -t bootstrap-3.2.0-dist.zip
-cp -R bootstrap-3.2.0-dist/* flask/www/static/
-rm -rf bootstrap-3.2.0-dist.zip
-rm -rf bootstrap-3.2.0-dist
+V=3.2.0
+wget https://github.com/twbs/bootstrap/releases/download/v${V}/bootstrap-${V}-dist.zip
+unzip -t bootstrap-${V}-dist.zip
+unzip bootstrap-${V}-dist.zip
+cp -R bootstrap-${V}-dist/* flask/www/static/
+rm -rf bootstrap-${V}-dist*
 ```
 
+Pull in JQuery (compatible, older version)
+------------------------------------------------------------------------
 
+```
+# in ./backend
+V=1.11.1
+wget http://code.jquery.com/jquery-${V}.min.js
+mv jquery-${V}.min.js flask/www/static/js/
+```
+
+Pull in JQuery Mobile
+------------------------------------
+
+```
+# in ./backend
+V=1.4.3
+wget http://jquerymobile.com/resources/download/jquery.mobile-${V}.zip
+unzip -t jquery.mobile-${V}.zip
+unzip -d jquery jquery.mobile-${V}.zip
+cp -R jquery/*.js flask/www/static/js/
+cp -R jquery/*.css flask/www/static/css/
+cp -R jquery/images flask/www/static/
+cp -R jquery/demos flask/www/static/jquery-mobile-demos
+rm jquery.mobile-${V}.zip
+rm -rf jquery
+```
+
+Pull in External Theme (example)
+------------------------------------
+
+```
+# in ./backend
+## https://wrapbootstrap.com/
 cd assets/Theme
 unzip Unify-theme_products-WB0412697.zip 
 cd ../..
+
+## Theme is Unify: expects its static assets under /assets/
 cp -R assets/Theme/HTML/assets/* flask/www/static/
 
 # We've replaced back-to-top
 #   so kill the overwritten copy and pull it back in from git
 rm flask/www/static/plugins/back-to-top.js
 git checkout -- flask/www/static/plugins/back-to-top.js
+```
 
 
+Run flask locally
+------------------------------------------
 
-Set up nginx
----------------------
-
-### NB: Need to enable nginx to access the static files directly
-su ::
-/usr/sbin/usermod -a -G sketchpad nginx 
-chmod g+rx /home/userdirectory/
-
-
-mkdir -p flask/www/templates
-mkdir -p flask/www/static
-
-
-## https://wrapbootstrap.com/
-## Theme is Unify: expects its static assets under /assets/
-
-cp -R assets/HTML/assets/* backend/flask/www/static/
-
+```
 cd flask
 python run.py
 # Browser : http://0.0.0.0:7882/
 # http://0.0.0.0:7882/static/blog2.html
+```
 
+Set up nginx
+---------------------
+
+```
+### NB: Need to enable nginx to access the static files directly
+su ::
+/usr/sbin/usermod -a -G sketchpad nginx 
+chmod g+rx /home/userdirectory/
+```
