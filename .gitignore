@@ -1,3 +1,7 @@
 .geany/session.ini
+
 *.pyc
+
 backend/bootstrap*
+backend/jquery*
+
