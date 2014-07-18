@@ -9,7 +9,7 @@ import flask # send_file and 'flask.g', Response
 
 #import string # Template
 
-from www.models import User, Site, DataRoom, Audit
+from www.models import User, Site, SubSite, Audit
 
 @requires_auth
 @app.route('/admin/site', methods=['GET', 'POST'])
