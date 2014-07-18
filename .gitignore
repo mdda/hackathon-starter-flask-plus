@@ -2,6 +2,15 @@
 
 *.pyc
 
-backend/bootstrap*
 backend/jquery*
+backend/bootstrap*
 
+backend/flask/www/static/js/jquery*
+backend/flask/www/static/css/jquery*
+backend/flask/www/static/css/bootstrap*
+
+backend/flask/www/static/fonts/glyphicons-halflings-regular*
+
+backend/flask/www/static/images/ajax-loader.gif
+backend/flask/www/static/images/icons-png/
+backend/flask/www/static/images/icons-svg/
