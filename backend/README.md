@@ -68,6 +68,8 @@ There is quite an involved set of main / sub / projects as a logical heirarchy. 
 Initialize database
 ============================
 
+Need to do this before running the web server :
+
 ```
 cd flask
 rm sqlite_hackathon.db
@@ -82,6 +84,8 @@ www.models.Site.ensure_exists(www.models.Site.tag_main)
 www.models.Site.ensure_exists('subsite')
 quit() 
 ```
+
+This demonstrates that, for a subsite (called 'subsite'), one can add custom properties :
 
 ```
 python 
@@ -135,6 +139,8 @@ cp -R jquery/demos flask/www/static/jquery-mobile-demos
 rm jquery.mobile-${V}.zip
 rm -rf jquery
 ```
+
+
 
 Pull in External Theme (example)
 ------------------------------------
