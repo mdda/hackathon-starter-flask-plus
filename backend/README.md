@@ -9,11 +9,13 @@ pip install pyaml      # For config reading
 pip install pyjade
 ```
 
-# Needed for MySQL
-yum install mysql-devel
-# Needed for MySQL
-## pip install MySQL-python
+Needed for MySQL
+---------------------
 
+```
+yum install mysql-devel
+pip install MySQL-python
+```
 
 HamlishJinja (being replaced with Jade)
 ----------------------------------------------
@@ -57,6 +59,7 @@ The users have a 'dict' of permissions - and they can be allowed/denied access t
 Initialize database
 ============================
 
+```
 cd flask
 rm sqlite_hackathon.db
 python 
@@ -69,7 +72,9 @@ www.models.User.ensure_client(1,_password='PASSWORD')
 www.models.Site.ensure_exists(www.models.Site.tag_main)
 www.models.Site.ensure_exists('subsite')
 quit() 
+```
 
+```
 python 
 import www
 site = www.models.Site.query().filter_by(tag='subsite').first()
@@ -78,6 +83,7 @@ site.set_data('test', 'temp_data','ewer')
 www.models.Site.commit()
 site.bundle
 quit() 
+```
 
 
 
