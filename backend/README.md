@@ -20,12 +20,13 @@ pip install MySQL-python
 HamlishJinja (being replaced with Jade)
 ----------------------------------------------
 
+```
 # Only necessary on dev machines, really:
 yum install rubygem-haml
 
 pip install git+http://github.com/Pitmairen/hamlish-jinja
 # haml2hamlish.py ..
-
+```
 
 Site structure
 ------------------------------------------------------------
@@ -47,11 +48,19 @@ This assumes that there are two site 'levels' :
   
   * Subsite3
 
-The Main Site as a SUPERUSER.  The subsites each have an ADMIN.  
+Users
+------------------------------------------------------------
 
-The subsites each have a number of projects, and users.
+There is quite an involved set of main / sub / projects as a logical heirarchy.  And users have flexible, fine-grained permissions.
 
-The users have a 'dict' of permissions - and they can be allowed/denied access to individual projects.
+
+* The Main Site has a SUPERUSER.  
+
+* The subsites each have an ADMIN.  
+
+* The subsites each have a number of projects, and users.
+
+* Each user has a 'dict' of permissions - and can be allowed/denied access to individual projects.
 
 
 
