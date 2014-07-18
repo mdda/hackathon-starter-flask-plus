@@ -1,1 +1,10 @@
-// Nothing here yet
+/* Padding for the menubar */
+body {
+  padding-top: 50px;
+}
+
+/* Something specific to the starter-template */
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}

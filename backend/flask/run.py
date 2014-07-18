@@ -1,7 +1,7 @@
 from www import app
 
 HOST = 'localhost'   # This restricts incoming calls to the local machine
-HOST = '0.0.0.0'     # This allows incoming calls from outside the machine (Windows will ask for Firewall permission)
+#HOST = '0.0.0.0'     # This allows incoming calls from outside the machine (Windows will ask for Firewall permission)
 PORT = 7882          # Arbitrary port (epoch accessible from outside)
 
 import platform
@@ -11,7 +11,7 @@ print "HOSTNAME = %s" % hostname
 
 # Better default choice than True
 debug=False
-if hostname.endswith('localhost') :
+if hostname.endswith('herald') :
     debug=True
 
 ## http://blog.rootsmith.ca/uncategorized/request-server-or-hostname-must-match-flasks-server_name-to-route-successfully/

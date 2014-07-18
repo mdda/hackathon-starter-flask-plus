@@ -11,10 +11,10 @@ import flask # send_file and 'flask.g'
 import os # isdir, isfile, listdir, normpath, getsize
 
 @app.route('/', methods=['GET', 'POST'])
-### This is to satisfy a dependency in admin.py
+### The 'home_page()' function is required here to satisfy a dependency in admin.py
 def home_page():
     #return redirect("http://www.example.com/", )
-    return render_template('start.jade')
+    return render_template('starter.jade')
 
 @app.route('/landing', methods=['GET', 'POST'])
 def landing_page():
