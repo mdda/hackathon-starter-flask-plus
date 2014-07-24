@@ -26,6 +26,12 @@ There's an opinionated selection of packages that can be easily installed :
   
     * Bootstrap
 
+One aspect of the backend is the flexibility it has for user accounts, sites and sub-sites.  
+This is probably over-kill for a Hackerthon - but the code has all been tested in a live site,
+and is (as authentication systems are) rather difficult to disentangle into simpler pieces.
+
+
+
 
 Data
 ---------
