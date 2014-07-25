@@ -35,3 +35,5 @@ and is (as authentication systems are) rather difficult to disentangle into simp
 Data
 ---------
 
+There's a CSV to SQLlite ETL here.
+
