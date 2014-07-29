@@ -211,3 +211,10 @@ su ::
 /usr/sbin/usermod -a -G sketchpad nginx 
 chmod g+rx /home/userdirectory/
 ```
+
+Set up uwsgi (TODO)
+---------------------
+
+```
+### NB: This setup is for uwsgi in Emperor mode...
+```
