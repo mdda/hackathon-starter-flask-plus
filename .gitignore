@@ -4,9 +4,6 @@
 
 env/
 
-backend/jquery*
-backend/bootstrap*
-
 backend/flask/www/static/js/jquery*
 backend/flask/www/static/css/jquery*
 backend/flask/www/static/css/bootstrap*
